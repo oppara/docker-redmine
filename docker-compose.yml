@@ -1,0 +1,10 @@
+version: '2'
+services:
+  redmine:
+    image: redmine:3.2-passenger
+    container_name: redmine
+    ports:
+      - "3333:3000"
+    volumes:
+      - ./plugins/:/usr/src/redmine/plugins
+      - ./themes/:/usr/src/redmine/public/themes
